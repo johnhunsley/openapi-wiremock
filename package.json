@@ -1,0 +1,13 @@
+{
+  "name": "openapi-wiremock",
+  "version": "1.0.0",
+  "description": "OpenAPI to WireMock stub generator and server",
+  "main": "generateWireMockStubs.js",
+  "scripts": {
+    "start": "node generateWireMockStubs.js"
+  },
+  "dependencies": {
+    "fs-extra": "^11.1.1",
+    "js-yaml": "^4.1.0"
+  }
+}
