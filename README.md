@@ -2,9 +2,11 @@
 A node.js project which reads an OpenAPI 3.0 spec' file and translates it into wiremock stubs
 
 Build the docker image 
+
 docker build -t openapi-wiremock .
 
 run the container
+
 docker run --rm -p 8080:8080 \
   -v $(pwd)/openapi.yaml:/app/openapi.yaml \
   -v $(pwd)/wiremock:/app/wiremock \
