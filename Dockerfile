@@ -16,9 +16,9 @@ RUN npm install
 COPY generateWireMockStubs.js .
 
 # Install WireMock standalone
-ENV WIREMOCK_VERSION=3.6.0
+ENV WIREMOCK_VERSION=3.13.1
 RUN mkdir /wiremock && \
-    curl -L -o /wiremock/wiremock.jar https://repo1.maven.org/maven2/com/github/tomakehurst/wiremock-jre8-standalone/${WIREMOCK_VERSION}/wiremock-jre8-standalone-${WIREMOCK_VERSION}.jar
+    curl -L -o /wiremock/wiremock.jar https://repo1.maven.org/maven2/org/wiremock/wiremock-standalone/${WIREMOCK_VERSION}/wiremock-standalone-${WIREMOCK_VERSION}.jar
 
 # Copy OpenAPI file at build time (optional)
 COPY openapi.yaml ./openapi.yaml
